@@ -4,7 +4,7 @@ angular.module('authServices', [])
     var authFactory = {};
 
     authFactory.login = function(loginData) {
-        return $http.post('/api/accounts/authenticatePDoctor', loginData).then(function(data){
+        return $http.post('/api/accounts/authenticateDoctor', loginData).then(function(data){
             
             AuthToken.setToken(data.data.token);
             return data;
