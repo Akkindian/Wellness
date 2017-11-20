@@ -2,12 +2,12 @@ angular.module('loginControllers',['authServices'])
 .controller('loginCtrl', function($location, $timeout, Auth){ 
     var app = this;
 if(Auth.isLoggedIn()){
-    console.log('Sucess User is logged in.');
+    console.log('Success: User is logged in.');
     Auth.getUser().then(function(data){
         console.log(data);
     });
 } else {
-    console.log('Failure user is Not logged in.');
+    console.log('Failure: user is Not logged in.');
 }
 
     this.loginUser = function(loginData){
