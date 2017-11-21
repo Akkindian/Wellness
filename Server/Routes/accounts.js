@@ -46,11 +46,7 @@ module.exports = function(router){
             });
     }
 
-    if (err) {
-            res.json({sucess:false, message:'Username or Email already exists!'});
-        } else {
-            res.json({sucess:true, message:'Doctor created'});
-        }
+    
 
 
     });
