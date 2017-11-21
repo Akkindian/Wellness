@@ -27,7 +27,7 @@ module.exports = function(router){
 
             var file;
 
-            req.body.PhotoProofOFLicencse = 'Uploads/' + id.generate() + '.'+ path.extname(req.body.File.FileName);
+            req.body.PhotoProofOFLicense = 'Uploads/' + id.generate() + '.'+ path.extname(req.body.File.FileName);
 
             file = req.body.File;
             delete req.body.File;
@@ -38,7 +38,7 @@ module.exports = function(router){
                 if (err) console.log(err);
                 else {
                     var imageBuffer = new Buffer(file.base64Data, 'base64');
-                    fs.writeFile(req.body.PhotoProofOFLicencse, imageBuffer, 'base64', function(err){
+                    fs.writeFile(req.body.PhotoProofOFLicense, imageBuffer, 'base64', function(err){
                         if (err) console.log(err);
                          else {   res.json({success: true, message: "User has been created successfuly"});}
                     });
