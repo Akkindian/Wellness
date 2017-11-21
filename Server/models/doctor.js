@@ -12,7 +12,7 @@ var DoctorSchema = new Schema({
     Phone: { type: String  },
     Email: { type: String,lowercase: true},
     City: { type: String },
-    UserName: { type: String, lowercase: true },
+    Username: { type: String, lowercase: true },
     Password: { type: String, required: true },
     ClinicName: { type: String, lowercase: true  },
     Speciality: { type: String, lowercase: true },
